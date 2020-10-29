@@ -1,42 +1,21 @@
+import 'package:fad_quizapp/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:fad_quizapp/Screens/Welcome/welcome_screen.dart';
 
-void main() => runApp(App());
+void main() => runApp(MyApp());
 
-class App extends StatelessWidget {
-  final appState = AppState();
-
+class MyApp extends StatelessWidget {
+  // This widget is the root of the application
   @override
   Widget build(BuildContext context) {
-    return AppStateProvider<AppState>(
-      appState: appState,
-      child: MaterialPage(),
-    );
-  }
-}
-
-class MaterialPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final theme = AppStateProvider.of<AppState>(context).currentTheme;
-
-    return ValueBuilder<MyTheme>(
-        streamed: theme,
-        builder: (context, snapshot) {
-          return MaterialApp(
-              title: 'Trivia example',
-              theme: _buildThemeData(snapshot.data),
-              home: HomePage());
-        });
-  }
-
-  ThemeData _buildThemeData(MyTheme appTheme) {
-    return ThemeData(
-      brightness: appTheme.brightness,
-      backgroundColor: appTheme.backgroundColor,
-      scaffoldBackgroundColor: appTheme.scaffoldBackgroundColor,
-      primaryColor: appTheme.primaryColor,
-      primaryColorBrightness: appTheme.primaryColorBrightness,
-      accentColor: appTheme.accentColor,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'FAD Quiz',
+      theme: ThemeData(
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      home: WelcomeScreen(),
     );
   }
 }
