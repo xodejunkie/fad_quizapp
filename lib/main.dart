@@ -2,6 +2,8 @@ import 'package:fad_quizapp/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:fad_quizapp/Screens/Welcome/welcome_screen.dart';
 
+import 'Screens/Login/login_screen.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: WelcomeScreen(),
+      home: LoginScreen(),
     );
   }
 }
