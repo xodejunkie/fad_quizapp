@@ -12,7 +12,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     // ratio to screen
-<<<<<<< HEAD
+
     return Background(
       child: SingleChildScrollView(
         child: Column(
@@ -49,7 +49,6 @@ class Body extends StatelessWidget {
               },
             ),
           ],
-=======
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -83,9 +82,11 @@ class Body extends StatelessWidget {
               ),
             ],
           ),
->>>>>>> 49a3509ba29c71a718344b406927800c4919dd43
         ),
       ),
+    )
+        )
+      )
     );
   }
 }
