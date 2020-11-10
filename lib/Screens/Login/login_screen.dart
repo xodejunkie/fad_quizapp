@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:fad_quizapp/constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../components/rounded_button.dart';
-
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,7 +10,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(" "),
-        leading: IconButton(icon: Icon(Icons.arrow_back, size: 30,), onPressed: () {}),
+        leading: IconButton(icon: Icon(Icons.arrow_back, size: 30,), onPressed: () { Navigator.pop(context);}),
         actions: [
           FlatButton(onPressed: () {
             Navigator.push(context, MaterialPageRoute(
@@ -86,7 +84,7 @@ class LoginScreen extends StatelessWidget {
                       Center(
                           child: Container(
                               width: double.infinity,
-                              height: size.height*0.05,
+                              height: size.height*0.06,
                               decoration: BoxDecoration(
                                   border: Border.all(color: kPrimaryColor),
                                   borderRadius: BorderRadius.circular(15.0),
