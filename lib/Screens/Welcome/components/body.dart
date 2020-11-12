@@ -12,43 +12,6 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     // ratio to screen
-
-    return Background(
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "Welcome to FAD QUIZ",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: size.height * 0.03),
-            SvgPicture.asset(
-              "assets/icons/chat.svg",
-              height: size.height * 0.45,
-            ),
-            SizedBox(height: size.height * 0.05),
-            RoundedBox(
-              text: "SIGN UP",
-              press: () {},
-            ),
-            RoundedBox(
-              text: "LOGIN",
-              color: kPrimaryLightColor,
-              textColor: Colors.black,
-              press: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return LoginScreen();
-                    },
-                  ),
-                );
-              },
-            ),
-          ],
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -84,9 +47,6 @@ class Body extends StatelessWidget {
           ),
         ),
       ),
-    )
-        )
-      )
     );
   }
 }
