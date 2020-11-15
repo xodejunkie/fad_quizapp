@@ -15,7 +15,7 @@ class SignUpScreen extends StatelessWidget {
               Icons.arrow_back,
               size: 30,
             ),
-            onPressed: () {}),
+            onPressed: () {Navigator.pop(context);}),
         actions: [
           FlatButton(
             onPressed: () {
@@ -86,7 +86,7 @@ class SignUpScreen extends StatelessWidget {
                       Center(
                           child: Container(
                             width: double.infinity,
-                              height: size.height*0.05,
+                              height: size.height*0.06,
                               decoration: BoxDecoration(
                                 border: Border.all(color: kPrimaryColor),
                                 borderRadius: BorderRadius.circular(15.0),
