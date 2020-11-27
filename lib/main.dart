@@ -1,5 +1,6 @@
-import 'package:fad_quizapp/Screens/account/account.dart';
-import 'package:fad_quizapp/Screens/levels/levels.dart';
+//import 'package:fad_quizapp/Screens/account/account.dart';
+// import 'package:fad_quizapp/Screens/HomePage/home_page.dart';
+// import 'package:fad_quizapp/Screens/levels/levels.dart';
 import 'package:fad_quizapp/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:fad_quizapp/Screens/Welcome/welcome_screen.dart';
@@ -11,13 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'FAD Quiz',
-      theme: ThemeData(
-        primaryColor: kPrimaryColor,
-        scaffoldBackgroundColor: Colors.white,
-      ),
-      home: WelcomeScreen()
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'FAD Quiz',
+        theme: ThemeData(
+          primaryColor: kPrimaryColor,
+          scaffoldBackgroundColor: Colors.white,
+        ),
+        home: WelcomeScreen());
   }
 }

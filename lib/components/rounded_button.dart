@@ -24,7 +24,7 @@ class RoundedBox extends StatelessWidget {
         child: FlatButton(
           padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
           color: color,
-          onPressed: () {},
+          onPressed: press,
           child: Text(
             text,
             style: TextStyle(color: textColor),

@@ -150,7 +150,10 @@ class _AccountSceenState extends State<AccountSceen> {
       {String pic, String text, Color color, Object place}) {
     return InkWell(
       onTap: () {
-        place != null ?Navigator.push(context, MaterialPageRoute(builder: (context) => place)) : null;
+        place != null
+            ? Navigator.push(
+                context, MaterialPageRoute(builder: (context) => place))
+            : null;
       },
       child: Container(
         height: 70,
@@ -187,7 +190,9 @@ class _AccountSceenState extends State<AccountSceen> {
                 ),
               ),
             ),
-            Spacer(flex: 3),
+            Spacer(
+              flex: 2,
+            ),
             Expanded(child: Icon(Icons.arrow_forward_ios, size: 15)),
           ],
         ),
